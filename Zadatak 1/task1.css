@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  height: 100dvh;
+  width: 100%;
+}
+
+section {
+  background-color: #e3cfcf;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.image,
+picture {
+  width: 100%;
+  display: flex;
+}
+.image img {
+  width: 100%;
+}
+
+.contentContainer {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.6rem;
+}
+
+.content {
+  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+.content p {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  text-align: center;
+  font-weight: 200;
+  display: none;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-self: stretch;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex-direction: column;
+  background-color: transparent;
+  border: 1px solid #000000;
+  font-size: 1.2rem;
+  padding: 8px 24px;
+  cursor: pointer;
+  height: 4.8rem;
+  transition: background-color 300ms ease;
+}
+button:hover {
+  background-color: #d7c4c4;
+}
+button img {
+  display: none;
+  width: 20px;
+  height: 2rem;
+}
+.textIcon {
+  gap: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  line-height: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+p.show {
+  display: block;
+  animation: show 600ms ease-out forwards;
+}
+button span {
+  color: red;
+  width: 100%;
+  height: 1px;
+  display: none;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: rotateX(100deg);
+    transform-origin: left;
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: left;
+  }
+}
+
+@media screen and (width > 480px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section {
+    width: 100%;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .image,
+  .contentContainer {
+    flex: 1;
+  }
+
+  .image,
+  .image img {
+    height: 100%;
+  }
+  .image img {
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .contentContainer {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .content {
+    width: 70%;
+  }
+
+  .content h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    text-align: center;
+    font-weight: 200;
+  }
+  .content p {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-align: center;
+    font-weight: 200;
+  }
+  button {
+    padding: 25px 48px;
+    font-size: 1.4rem;
+  }
+
+  .textIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (width<768px) and (width >480px) {
+  .contentContainer {
+    container-type: inline-size;
+    width: 100%;
+  }
+
+  .textContent h1 {
+    font-size: 8cqi;
+  }
+  .textContent p {
+    font-size: 5cqi;
+  }
+}
+
+@media screen and (width > 480px) and (width<920px) and (orientation: landscape) {
+  .textContent h1 {
+    font-size: 3cqi;
+  }
+  .textContent p {
+    font-size: 1.5cqi;
+  }
+}
+
+@media screen and (width > 480px) and (width<750px) and (orientation: landscape) {
+  .textContent h1 {
+    font-size: 6cqi;
+  }
+  .textContent p {
+    font-size: 3cqi;
+  }
+}

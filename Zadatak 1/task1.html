@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First task" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="task1.css" />
+    <script defer src="task1.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="image">
+        <picture>
+          <source media="(min-width:500px)" srcset="/src/1440.png" />
+
+          <img
+            src="/src/LW_2019_47_PAPAYA_01082019_LOOK9_596.png"
+            alt="women sitting"
+          />
+        </picture>
+      </div>
+      <div class="contentContainer">
+        <div class="content">
+          <div class="textContent">
+            <h1>HANDCRAFTED AND RESPONSIBLY SOURCED</h1>
+            <p class="text show">
+              On the other hand, we denounce with righteous indignation and
+              dislike men who are so beguiled and demoralized by the charms of
+              pleasure of the moment, so blinded by desire, that they cannot
+              foresee the pain and trouble that are bound to ensue; and equal
+              blame belongs to those who fail in their duty through weakness of
+              will, which is the same as saying through shrinking from toil and
+              pain.
+            </p>
+            <p class="alternateText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              mollitia doloribus corrupti alias consequuntur quia vel odit!
+              Ducimus sit repudiandae eaque et rem? Ad quidem obcaecati
+              provident quaerat nisi eos, suscipit delectus quo aliquid
+              voluptatem totam aliquam harum, molestias eveniet numquam ipsa
+              tempore laboriosam laudantium corrupti eius maiores dicta veniam
+              ab possimus!
+            </p>
+          </div>
+          <button>
+            <!-- these icons and line are not visible in the figma file; I don't see why are they even included in the file as they just mess up the button size which made me set a fixed size -->
+            <div class="textIcon">
+              <img src="src/icon.png" alt="" />
+              Learn more
+              <img src="src/icon kopija.png" alt="" />
+            </div>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const btn = document.querySelector('button')
+      const txt = document.querySelector('.text')
+      const alternateText = document.querySelector('.alternateText')
+
+      btn.addEventListener('click', () => {
+        txt.classList.toggle('show')
+        alternateText.classList.toggle('show')
+        btn.style.visibility = 'hidden'
+      })
+    </script>
+  </body>
+</html>

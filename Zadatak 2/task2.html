@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Second task" />
+    <title>Second task</title>
+    <link rel="stylesheet" href="task2.css" />
+    <script src="task2.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="title">
+          <h1>Our recipes</h1>
+          <p>
+            Great on its own or as a mixer. Fun cocktail & mocktail recipes to
+            try.
+          </p>
+          <button>
+            <div class="text">
+              <p>View all recipes</p>
+            </div>
+            <span class="line"></span>
+          </button>
+        </div>
+        <div class="recipes">
+          <div class="recipe">
+            <div class="imageGraphic">
+              <div class="image">
+                <img
+                  src="/src/1440 kopija.png"
+                  class="mainImg"
+                  alt="Citrus mocktail"
+                />
+              </div>
+              <div class="illContainer illContainer1"></div>
+            </div>
+            <div class="recipeInfo">
+              <h3>Sparkling triple citrus & mint mocktail</h3>
+            </div>
+          </div>
+          <div class="recipe">
+            <div class="imageGraphic">
+              <div class="image">
+                <img
+                  src="/src/1440-1.png"
+                  class="mainImg"
+                  alt="Mango mocktail"
+                />
+              </div>
+              <div class="illContainer illContainer2"></div>
+              <div class="illContainer illContainer3"></div>
+            </div>
+            <div class="recipeInfo">
+              <h3>MangoSparkling Triple Citrus & Mint Mocktail bullet</h3>
+            </div>
+          </div>
+          <div class="recipe">
+            <div class="imageGraphic">
+              <div class="image">
+                <img src="/src/1440-2.png" class="mainImg" alt="Mocktail" />
+              </div>
+              <div class="illContainer illContainer4"></div>
+            </div>
+            <div class="recipeInfo">
+              <h3>Sparkling Triple Citrus & Mint Mocktail</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let mql = window.matchMedia('(min-width: 600px)')
+
+      if (mql.matches) {
+        document.querySelector('.recipe:nth-of-type(2) h3 ').textContent =
+          'Sparkling Triple Citrus & Mint Mocktail'
+      }
+      window.addEventListener('resize', () => {
+        if (mql.matches) {
+          document.querySelector('.recipe:nth-of-type(2) h3 ').textContent =
+            'Sparkling Triple Citrus & Mint Mocktail'
+        } else {
+          document.querySelector('.recipe:nth-of-type(2) h3 ').textContent =
+            'MangoSparkling Triple Citrus & Mint Mocktail bullet'
+        }
+      })
+    </script>
+  </body>
+</html>

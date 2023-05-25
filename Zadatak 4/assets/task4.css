@@ -1,0 +1,86 @@
+@import url('https://fonts.cdnfonts.com/css/domaine-display-narrow');
+@import url('https://fonts.cdnfonts.com/css/avenir-lt-std');
+@font-face {
+  font-family: avenir;
+  src: url('./src/avenir_lt_std_35_light.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Domaine Display Narrow', sans-serif;
+}
+section {
+  height: 344px;
+}
+
+.container {
+  display: flex;
+  gap: 9.6rem;
+  width: 100%;
+  padding: 6.4rem;
+  background-color: #f5f1ec;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.iconImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 1.2rem;
+  height: 100%;
+  min-width: 150px;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.desc {
+  font-family: 'Avenir LT Std', sans-serif;
+  font-size: 1.4rem;
+  line-height: 130%;
+  font-weight: 200;
+  text-align: center;
+}
+
+@media screen and (max-width: 1368px) {
+  .container {
+    gap: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+  section {
+    height: 100%;
+  }
+}
+
+

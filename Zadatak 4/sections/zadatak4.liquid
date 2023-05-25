@@ -1,0 +1,73 @@
+{% schema %}
+{
+  "name": "Zadatak 4",
+  "settings": [],
+  "presets": [],
+  "blocks": [
+    {
+      "type": "zadatak4",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Icon Image",
+          "id": "icon",
+          "info": "Select an icon image for the product feature."
+        },
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default": "Enter title",
+          "info": "Enter the title for the product feature."
+        },
+        {
+          "type": "textarea",
+          "label": "Description",
+          "id": "description",
+          "default": "Enter desc",
+
+          "info": "Enter the description for the product feature."
+        }
+      ]
+    
+    }
+  ],
+    "presets": [
+    {
+      "name": "Zadatak 4",
+    "category": "Text"
+    }
+  ]
+}
+
+{% endschema %}
+
+
+
+<div class="product-features-section">
+<section>
+    <div class="container">
+  {% for block in section.blocks %}
+    {% if block.settings.icon != blank and block.settings.title != blank and block.settings.description != blank %}
+       <div class="card">
+        <div class="icon">
+     <img class="iconImg" src="{{ block.settings.icon | img_url: 'small' }}" alt="icon" />
+    </div>
+       <h1 class="title">{{ block.settings.title }}</h1>
+<p class="desc">
+          {{ block.settings.description }}
+        </p>
+      </div>  
+ {% endif %}
+    {% endfor %}
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
